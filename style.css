@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+}
+
+body{
+    height: 100vh;
+    background: rgb(174, 228, 225);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.players{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: smaller;
+    background: chartreuse;
+}
+
+
+.startGame{
+    margin-top: 10px;
+    width: 75%;
+    align-self: center;
+}
+
+.container{
+    height: 75%;
+    width: 75vw;
+    display: flex;
+    background: cornsilk;
+    border-radius: 10px;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 10px;
+    flex:1;
+}
+
+.info{
+    background: cyan;
+    margin: 10px;
+    display: grid;
+    flex:1;
+    place-items: center;
+}
+
+.box{
+    border: 1px solid;
+    display: grid;
+    place-items: center;
+}
+
+.box:hover{
+    background: 
+    linear-gradient(45deg,rgb(99, 218, 125),rgb(68, 214, 190));
+}
+
+.classturn{
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes cc{
+    0%   {background-color: red; transform:scale(1.01); }
+    25%  {background-color: yellow; transform:scale(1.05); }
+    50%  {background-color: rgb(60, 173, 226); transform:scale(1.01); }
+    100% {background-color: rgb(52, 231, 52); transform:scale(1); }
+}
+
+.gameWon{
+    animation-name: cc;
+    animation-duration: 5s;
+    transition: all;
+}
+
+@media screen and (max-width:768px){
+    .container{
+    flex-direction: column;
+    }
+}
